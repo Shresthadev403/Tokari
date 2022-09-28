@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/header/header';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import{BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Home from './components/home/home';
 
 function App() {
+
+
+
+
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -17,12 +21,18 @@ function App() {
     }
   }, []);
 
+const toggleDarkMode=()=>{
+  
+}
+
+  
+
   return (
     
-       <div >
+       <div  >
         <Router>
         <Header/>
-        <div className="main-body">
+        <div>
           <Routes>
           <Route path='/' element={<Home/>}></Route>
           </Routes>

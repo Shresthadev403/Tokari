@@ -1,4 +1,5 @@
 import ProductCard from '../productCard/productCard';
+import ProductOfferBox from '../productOfferBox/productOfferBox';
 import demoImage1 from './demoImage1.jpg';
 import demoImage2 from './demoImage2.jpg';
 import demoImage3 from './demoImage2.jpg';
@@ -12,7 +13,7 @@ function Home() {
         {/* slider crousal */}
       <div id="default-carousel" className="relative" data-carousel="slide" data-ride="carousel" >
         {/* Carousel wrapper */}
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+        <div className="relative h-56 overflow-hidden rounded-xs md:h-96">
           {/* Item 1 */}
           <div
             className="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
@@ -125,7 +126,7 @@ function Home() {
         </button>
       </div>
 
-      <div className='grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2    bg-black '>
+      {/* <div className='grid justify-center 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2    bg-black '>
         <ProductCard/>
         <ProductCard/>
         <ProductCard/>
@@ -135,7 +136,32 @@ function Home() {
         <ProductCard/>
         <ProductCard/>  <ProductCard/>
 
+      </div> */}
+
+
+ <div className='grid justify-center 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2    bg-black '>
+ <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+
       </div>
+{/* <div className='flex  flex-wrap'>
+<ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+      <ProductOfferBox/>
+     
+</div> */}
+     
     </div>
   );
 }
