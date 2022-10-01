@@ -139,7 +139,7 @@ function Home() {
       </div> */}
 
 
- <div className='grid justify-center 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2    bg-black '>
+ <div className='grid justify-center 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols- md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2    bg-black '>
  <ProductOfferBox/>
       <ProductOfferBox/>
       <ProductOfferBox/>

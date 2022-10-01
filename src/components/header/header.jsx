@@ -4,12 +4,13 @@ import Slider from "./slider";
 import BottomHeader from "./bottomHeader";
 import { useEffect } from "react";
 import SearchBar from "./searchBar";
+import {Link} from 'react-router-dom';
 
 function Header() {
 
  
   return (
-    <div className="header">
+    <div className="header sticky top-0  z-[100] ">
       <div className="h-14 p-2  relative z-[100] flex  justify-between bg-black text-white items-center">
         {/* headerleft */}
         {/* for controlling sidebar */}
@@ -39,7 +40,8 @@ function Header() {
           </button>
         </div>
         <div className="h-14 w-18 flex items-center">
-          <img src={tokariLogo} alt="logo" className="object-contain h-10" />
+          <Link to='/'><img src={tokariLogo} alt="logo" className="object-contain h-10" /></Link>
+          
         </div>
         {/* header middle */}
         <div className=" hidden md:block  container mx-auto pl-2 pr-2">
@@ -49,12 +51,22 @@ function Header() {
 
         {/* header right */}
         <div className="flex min-w-max ">
-          <div className="flex items-center px-2  w-28 translate-tighter cursor-pointer hover:outline outline-1 outline-white ">
+          
+          <Link to={'/Dashboard'} className="flex items-center ">
+          <div className="hidden lg:flex  items-center  px-4 pt-2 pb-2  cursor-pointer hover:outline outline-1 outline-white ">
+            Dashboard
+          </div>
+          </Link>
+       
+          <div className=" hidden lg:flex items-center px-2  w-28 translate-tighter cursor-pointer hover:outline outline-1 outline-white ">
             Returns and Orders
           </div>
-          <div className=" flex items-center  px-4  cursor-pointer hover:outline outline-1 outline-white ">
+          <Link to={'/SignIn'} className="flex items-center">
+          <div className=" flex items-center  px-4 pt-2 pb-2   cursor-pointer hover:outline outline-1 outline-white ">
             Sign In
           </div>
+          </Link>
+          
           <div className="px-4  flex items-center cursor-pointer hover:outline outline-1 outline-white ">
             <svg
               className="h-8 w-8 text-red-700"
