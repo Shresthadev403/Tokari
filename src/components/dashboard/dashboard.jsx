@@ -26,7 +26,7 @@ function Dashboard() {
       </div>
     
      
-      <div className="w-full">
+      <div className="w-full dark:bg-gray-600">
       <Routes>
      
         <Route exact path="Kanban" element={<Kanban/>}></Route>

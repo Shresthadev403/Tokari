@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/header/header';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import{BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Home from './components/home/home';
 import Pages from './components/pages/pagesRoutes';
@@ -13,8 +13,8 @@ import MainRouter from './mainRouter';
 
 
 function App() {
-
-
+const[viewMode,setViewMode]=useState();
+const darkModeRef=useRef(null);
 
 
 
@@ -33,17 +33,34 @@ function App() {
     }
   }, []);
 
-const toggleDarkMode=()=>{
-  
+
+  useEffect(()=>{
+const mode=localStorage.getItem("tokariViewMode");
+if(!mode){
+  localStorage.setItem("tokariViewMode","light");
+  setViewMode("light")
+}else{
+  setViewMode(mode);
 }
+  },[]);
+
+useEffect(()=>{
+if(viewMode=="light"){
+darkModeRef.current.classList.remove('dark');
+localStorage.removeItem('tokariViewMode')
+}else if(viewMode=="dark"){
+  darkModeRef.current.classList.add('dark');
+  localStorage.setItem("tokariViewMode","dark");
+}
+},[viewMode]);
 
   
 
   return (
     
-       <div  className=' relative w-full' >
+       <div  className=' relative w-full'ref={darkModeRef}  >
        
-        <Header/>
+        <Header viewMode={viewMode} setViewMode={setViewMode}/>
         <MainRouter/>
   
     </div>
