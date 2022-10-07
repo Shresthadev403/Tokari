@@ -1,5 +1,5 @@
 function SignUp() {
-    return (   <div className="flex justify-center mt-0 md:mt-10">
+    return (   <div className="flex justify-center mt-0 pt-10">
     <div className="p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
          <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                 Create and account

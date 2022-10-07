@@ -6,6 +6,9 @@ import { useEffect } from "react";
 import SearchBar from "./searchBar";
 import { Link } from "react-router-dom";
 
+
+
+
 function Header(props) {
 const {setViewMode,viewMode}=props;
 const toggleDarkMode=(e)=>{

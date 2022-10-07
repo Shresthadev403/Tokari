@@ -58,7 +58,7 @@ localStorage.removeItem('tokariViewMode')
 
   return (
     
-       <div  className=' relative w-full'ref={darkModeRef}  >
+       <div  className=' relative w-full 'ref={darkModeRef}  >
        
         <Header viewMode={viewMode} setViewMode={setViewMode}/>
         <MainRouter/>
