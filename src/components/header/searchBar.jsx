@@ -1,89 +1,88 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Select  from "react-select";
+import Select from "react-select";
 
 const categoryList = [
-  "Electronics",
-  "Cameras",
-  "Laptops",
-  "Accessories",
-  "Headphones",
-  "Food",
-  "Books",
-  "Clothes/Shoes",
-  "Beauty/Health",
-  "Sports",
-  "Outdoor",
-  "Home",
+  { value: "Electronics", label: "Electronics" },
+  { value: "Cameras", label: "Cameras" },
+  { value: "Laptops", label: "Laptops" },
+  { value: "Accessories", label: "Accessories" },
+  { value: "Headphones", label: "Headphones" },
+  { value: "Food", label: "Food" },
+  { value: "Books", label: "Books" },
+  { value: "Clothes/Shoes", label: "Clothes/Shooes" },
+  { value: "Beauty/Health", label: "Beauty/Health" },
+  { value: "Sports", label: "Sports" },
+  { value: "Outdoor", label: "Outdoor" },
+  { value: "Home", label: "Home" },
 ];
 
-const options=[
-  {value:"Electronics",label:"Electronics"},
-  {value:"All",label:"All"},
-  {value:"Computer",label:"Computer"},
+const customStyles = {
+  container: (provided) => ({
+    ...provided,
+    width: "max-content",
+  }),
+  menu: (base) => ({
+    ...base,
+
+    width: "max-content",
+    minWidth: "100%",
+  }),
+  control: (base, state) => ({
+    ...base,
+ 
   
-]
+    border: state.isFocused ? 0 : 0,
+    // This line disable the blue border
+    boxShadow: state.isFocused ? 0 : 0,
+    "&:hover": {
+      border: state.isFocused ? 0 : 0,
+   boxShadow:"none"
+      
+    },
+  }),
+};
 
 function SearchBar() {
-  const[category,setCategory]=useState("All");
+  const [category, setCategory] = useState("All");
 
-  const handleCategoryChange=(value)=>{
-setCategory(value)
-  }
+  const handleCategoryChange = (item) => {
+    setCategory(item.value);
+    console.log(item.value);
+  };
 
-  const adjustSelectWidth=(e)=>{
-    const optionValue = this.get('members').value;
-    const optionTextLength = document.querySelector(`option[value="${optionValue}"]`).innerHTML.length;
-    e.style.width= optionTextLength*8 + "px";
-  }
+  const adjustSelectWidth = (e) => {
+    const optionValue = this.get("members").value;
+    const optionTextLength = document.querySelector(
+      `option[value="${optionValue}"]`
+    ).innerHTML.length;
+    e.style.width = optionTextLength * 8 + "px";
+  };
 
   return (
     <div>
       <form>
         <div className="flex">
-          <label
+          {/* <label
             htmlFor="search-dropdown"
             className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
           >
             Your Email
-          </label>
-          <button
-            id="dropdown-button"
-            data-dropdown-toggle="dropdown"
-            className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
-            type="button"
-          >
-            {category}
-            <svg
-              aria-hidden="true"
-              className="ml-1 w-4 h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
-          <div  className=" shrink grow  z-100 inline-flex items-center  text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600">
-                  {/* <Select 
-                  
-                  className=" w-auto h-full border-none rounded-l-lg appearance-none  bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:border-l focus:border-r focus:bg-white focus:border-gray-  dark:bg-gray-700 dark:border-gray-700  dark:text-white">
-              <option>All</option>
-                  
-                  {
-                    categoryList.map((category,index)=>{
-                      return  <option key={index}>{category}</option>
-                    })
-                  }
-                  </Select> */}
+          </label> */}
 
-               
-              </div>
+          <div className=" shrink grow   z-100   text-sm font-medium  text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600">
+            <Select
+              className="my-react-select-container"
+              classNamePrefix="my-react-select"
+              components={{
+                IndicatorSeparator: () => null,
+              }}
+              styles={customStyles}
+              value={{ label: category }}
+              onChange={handleCategoryChange}
+              options={categoryList}
+            />
+          </div>
          
           <div className="relative w-full">
             <input
