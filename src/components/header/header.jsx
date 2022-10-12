@@ -1,5 +1,5 @@
 import "./header.css";
-import tokariLogo from "../../tokariLogo.png";
+import tokariLogo from "../../newlogo.png";
 import Slider from "./slider";
 import BottomHeader from "./bottomHeader";
 import { useEffect } from "react";
@@ -51,7 +51,7 @@ if(e.target.value=="light"){
         </div>
         <div className="h-14 w-18 flex items-center">
           <Link to="/">
-            <img src={tokariLogo} alt="logo" className="object-contain h-10" />
+            <img src={tokariLogo} alt="logo" className="object-contain h-20 w-80 " />
           </Link>
         </div>
         {/* header middle */}
