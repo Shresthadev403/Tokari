@@ -23,7 +23,7 @@ function Dashboard() {
 
   return (  
     <div className=" flex">
-      <div className="h-screen sticky  top-20" >
+      <div className="h-screen sticky  top-10 lg:top-20 " >
       <DashboardSidebar/>
       </div>
     

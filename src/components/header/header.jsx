@@ -116,7 +116,7 @@ if(e.target.value=="light"){
         <BottomHeader />
       </div>
 
-      <Slider />
+      <Slider viewMode={viewMode} setViewMode={setViewMode} />
     </div>
   );
 }

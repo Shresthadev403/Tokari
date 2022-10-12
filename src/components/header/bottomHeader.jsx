@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const bottomHeaderItems = [
   "All",
-  "Sell",
+"Popular",
   "Today's Deal",
   "Mobile",
   "Customer Service",
