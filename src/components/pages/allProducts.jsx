@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import FilterDialog from "../Dialog/filterDialog";
 import FilterBar from "../Filterbar/filterBar";
 import FilterResult from "../Filterbar/filterResult";
 
@@ -18,13 +19,21 @@ const categoryList = [
   "Home",
 ];
 
+
+
 function AllProducts() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const[filterDialogOpen,setFilterDialogOpen]=useState(false);
+
+  if(filterDialogOpen){
+    return  <FilterDialog filterDialogOpen={filterDialogOpen} setFilterDialogOpen={setFilterDialogOpen}/>
+  }
 
   return (
     <div>
+      
       <div className="flex">
-        <div className="h-screen sticky  top-10 lg:top-20">
+        <div className=" hidden md:block h-screen sticky  top-10 lg:top-20">
           <FilterBar
             categoryList={categoryList}
             activeCategory={activeCategory}
@@ -32,7 +41,8 @@ function AllProducts() {
           />
         </div>
 
-        <div className="h-screen sticky  top-10 lg:top-20">
+        <div className="fixed top-25 right-2 md:hidden" onClick={e=>{setFilterDialogOpen(true)}}>
+         
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

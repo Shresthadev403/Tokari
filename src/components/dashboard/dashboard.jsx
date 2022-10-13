@@ -3,11 +3,14 @@
 import DashboardSidebar from "./dashboardSidebar";
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Kanban from "./Kanban";
+
 import OverView from "./overview";
 import Users from "./users";
 import Products from "./products";
 import Orders from "./orders";
+import CreateProduct from "./createProduct";
+import UserAdminDetails from "./userAdminDetails";
+import ProductAdminDetails from "./productAdminDetials";
 
 
 
@@ -31,8 +34,11 @@ function Dashboard() {
       <div className="w-full dark:bg-gray-700">
       <Routes>
      
-        <Route exact path="Kanban" element={<Kanban/>}></Route>
-        <Route exact path="Users" element={<Users/>}></Route>
+        <Route exact path="CreateProduct" element={<CreateProduct/>}></Route>
+        <Route exact path="Users" element={<Users/>}></Route> 
+        <Route exact path="User/123" element={<UserAdminDetails/>}></Route>
+        <Route exact path="Product/123" element={<ProductAdminDetails/>}></Route>
+
         <Route exact path="Products" element={<Products/>}></Route>
         <Route exact path="Orders" element={<Orders/>}></Route>
         <Route exact path="/" element={<OverView/>}></Route>
