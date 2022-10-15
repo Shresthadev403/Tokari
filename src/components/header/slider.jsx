@@ -69,12 +69,46 @@ function Slider(props) {
 
               {
                 bottomHeaderItems.map((item,index)=>{
+
+                  if (item=="All") {
+                    return<button
+                    className="flex"
+                    key={index}
+                    type="button" data-drawer-dismiss="drawer-disabled-backdrop" aria-controls="drawer-disabled-backdrop">
+                     
+                     <Link to={`/Products/${item}`} className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                      
+                      <span className="flex-1 ml-3 whitespace-nowrap">{item}</span>
+                     
+                    </Link>
+                    </button>
+
+                    
+                  }
+
+                  if (item=="Customer Service") {
+                    return<button
+                    className="flex"
+                    key={index}
+                    type="button" data-drawer-dismiss="drawer-disabled-backdrop" aria-controls="drawer-disabled-backdrop">
+                     
+                     <Link to={`/${item.replace(/\s+/g,"")}`} className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                      
+                      <span className="flex-1 ml-3 whitespace-nowrap">{item}</span>
+                     
+                    </Link>
+                    </button>
+
+                    
+                  }
+
+
                  return<button
                  className="flex"
                  key={index}
                  type="button" data-drawer-dismiss="drawer-disabled-backdrop" aria-controls="drawer-disabled-backdrop">
                   
-                  <Link to={`/Products/${item}`} className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <Link to={`/Products/All/${item.replace(/\s+/g,'')}`} className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                    
                    <span className="flex-1 ml-3 whitespace-nowrap">{item}</span>
                   

@@ -20,8 +20,22 @@ function BottomHeader() {
     <div>
       <div className="hidden lg:flex p-2  relative   justify-between bg-slate-900 text-white items-center">
         {bottomHeaderItems.map((item,index) => {
+          if(item=="All"){
+            return  <Link key={index} to={`/Products/${item}`}>
+            <div className="flex items-center px-2   translate-tighter cursor-pointer hover:outline outline-1 outline-white ">
+              {item}
+            </div>
+          </Link>
+          }
+          if(item=="Customer Service"){
+            return  <Link key={index} to={`/${item.replace(/\s+/g,"")}`}>
+            <div className="flex items-center px-2   translate-tighter cursor-pointer hover:outline outline-1 outline-white ">
+              {item}
+            </div>
+          </Link>
+          }
           return (
-            <Link key={index} to={`/Products/${item}`}>
+            <Link key={index} to={`/Products/All/${item.replace(/\s+/g, '')}`}>
               <div className="flex items-center px-2   translate-tighter cursor-pointer hover:outline outline-1 outline-white ">
                 {item}
               </div>

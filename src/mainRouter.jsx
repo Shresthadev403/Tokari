@@ -19,9 +19,10 @@ function MainRouter() {
         <Route exact path='/SignUp' element={<SignUp/>}></Route>
         <Route exact path='/MyCart' element={<MyCart/>}></Route>
         <Route exact path='/Products/Customer%20Service' element={<CustomerService/>}></Route>
-        <Route exact path='/Products/All' element={<AllProducts/>}></Route>
+     
         <Route exact path='/Product/123' element={<ProductDetailsClient/>}></Route>
         <Route exact path='/Products/Sell' element={<Sell/>}></Route>
+        <Route exact path='/Products/All/*' element={<AllProducts/>}></Route>
 {/* admin Routes */}
         
         <Route  path='/Dashboard/*' element={<Dashboard/>}></Route>

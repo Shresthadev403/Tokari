@@ -1,38 +1,44 @@
-import { Link } from "react-router-dom";
-import productDemoImage from "../../demoImages/productDemoImage1.jpg";
-import ProductCard from "../productCard/productCard";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AllDefault from "../pages/childPages/allDefault";
+import NewRelease from "../pages/childPages/newRelease";
+import OtherChildPages from "../pages/childPages/otherChildPages";
+import Popular from "../pages/childPages/popular";
+import TodayDeal from "../pages/childPages/todayDeal";
+import CustomerService from "../pages/customerService";
+
+
+
 
 function FilterResult() {
   return (
     <div>
       {/* items */}
 
-      <div className="grid justify-center 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols- md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2    bg-black ">
-        <Link to={`/Product/123`}>
-          <ProductCard />
-        </Link>
-        <Link to={`/Product/123`}>
-          <ProductCard />
-        </Link>
-        <Link to={`/Product/123`}>
-          <ProductCard />
-        </Link>
-        <Link to={`/Product/123`}>
-          <ProductCard />
-        </Link>
-        <Link to={`/Product/123`}>
-          <ProductCard />
-        </Link>
-        <Link to={`/Product/123`}>
-          <ProductCard />
-        </Link>
-        <Link to={`/Product/123`}>
-          <ProductCard />
-        </Link>
-        <Link to={`/Product/123`}>
-          <ProductCard />
-        </Link>
-      </div>
+
+      
+        
+      <Routes>
+     
+     <Route exact path="/" element={<AllDefault/>}></Route>
+     <Route exact path="Popular" element={<Popular/>}></Route> 
+     <Route exact path="Today'sDeal" element={<TodayDeal/>}></Route> 
+     <Route exact path="NewRelease" element={<NewRelease/>}></Route> 
+     {/* other filter childPages */}
+     {["Books", "Mobile","Electronics","Fashion","HomeandKitchen","Computer"].map((path, index) => {
+        return (
+          <Route path={path} element={
+             <OtherChildPages/>
+            }
+            key={index}
+          />
+        );
+      })}
+    
+   </Routes>
+        
+        
+    
     </div>
   );
 }
