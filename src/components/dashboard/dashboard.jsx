@@ -12,6 +12,8 @@ import CreateProduct from "./createProduct";
 import UserAdminDetails from "./userAdminDetails";
 import ProductAdminDetails from "./productAdminDetials";
 import OrderAdminDetails from "./orderAdminDetails";
+import Stock from "./stock";
+import Sales from "./sales";
 
 
 
@@ -42,6 +44,8 @@ function Dashboard() {
         <Route exact path="Order/123" element={<OrderAdminDetails/>}></Route>
         <Route exact path="Products" element={<Products/>}></Route>
         <Route exact path="Orders" element={<Orders/>}></Route>
+        <Route exact path="Stock" element={<Stock/>}></Route>
+        <Route exact path="Sales" element={<Sales/>}></Route>
         <Route exact path="/" element={<OverView/>}></Route>
       </Routes>
       </div>

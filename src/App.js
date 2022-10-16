@@ -9,6 +9,7 @@ import Dashboard from './components/dashboard/dashboard';
 import AllProducts from './components/pages/allProducts';
 import CustomerService from './components/pages/customerService';
 import MainRouter from './mainRouter';
+import Footer from './components/footer/footer';
 
 
 
@@ -62,6 +63,7 @@ localStorage.removeItem('tokariViewMode')
        
         <Header viewMode={viewMode} setViewMode={setViewMode}/>
         <MainRouter/>
+        <Footer/>
   
     </div>
   
