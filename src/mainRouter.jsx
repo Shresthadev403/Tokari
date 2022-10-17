@@ -10,7 +10,11 @@ import AllProducts from "./components/pages/allProducts";
 import CustomerService from "./components/pages/customerService";
 import Sell from "./components/pages/sell";
 
+
 function MainRouter() {
+
+  
+
     
     return ( <div className="dark:bg-gray-700 min-h-screen dark:text-white">
         <Routes>
@@ -21,7 +25,7 @@ function MainRouter() {
         <Route exact path='/Products/Customer%20Service' element={<CustomerService/>}></Route>
      
         <Route exact path='/Product/123' element={<ProductDetailsClient/>}></Route>
-        <Route exact path='/Products/Sell' element={<Sell/>}></Route>
+        <Route exact path='/CustomerService' element={<CustomerService/>}></Route>
         <Route exact path='/Products/All/*' element={<AllProducts/>}></Route>
 {/* admin Routes */}
         

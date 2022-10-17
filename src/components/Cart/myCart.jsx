@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Carousel from "../carousel/carousel";
 import MyCartTable from "./myCartTable";
 
 function MyCart() {
@@ -181,7 +182,12 @@ function MyCart() {
   
        
   
-     
+     <div>
+     <h2 className="text-2xl font-semibold leading-tight dark:text-white mt-2 mb-2 ml-2">
+              Find More Products
+            </h2>
+      <Carousel/>
+     </div>
   
        
       </div>

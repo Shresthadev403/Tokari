@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom';
+import Carousel from '../carousel/carousel';
 import ProductCard from '../productCard/productCard';
+import ProductNewReleaseCard from '../productCard/productNewReleaseCard';
 import ProductOfferBox from '../productOfferBox/productOfferBox';
 import demoImage1 from './demoImage1.jpg';
 import demoImage2 from './demoImage2.jpg';
@@ -126,17 +129,7 @@ function Home() {
         </button>
       </div>
 
-      {/* <div className='grid justify-center 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2    bg-black '>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>  <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>  <ProductCard/>
-
-      </div> */}
+      
 
 
  <div className='grid justify-center 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols- md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2    bg-black '>
@@ -144,23 +137,37 @@ function Home() {
       <ProductOfferBox/>
       <ProductOfferBox/>
       <ProductOfferBox/>
-      <ProductOfferBox/>
-      <ProductOfferBox/>
-      <ProductOfferBox/>
-      <ProductOfferBox/>
+    
+     
 
       </div>
-{/* <div className='flex  flex-wrap'>
-<ProductOfferBox/>
-      <ProductOfferBox/>
-      <ProductOfferBox/>
-      <ProductOfferBox/>
-      <ProductOfferBox/>
-      <ProductOfferBox/>
-      <ProductOfferBox/>
-      <ProductOfferBox/>
-     
-</div> */}
+      <div className="grid justify-center 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols- md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2    bg-black ">
+       
+       <Link to={`/Product/123`}>
+         <ProductNewReleaseCard/>
+       </Link>
+       <Link to={`/Product/123`}>
+         <ProductCard />
+       </Link>
+       <Link to={`/Product/123`}>
+         <ProductCard/>
+       </Link>
+       <Link  to={`/Product/123`}>
+         <ProductNewReleaseCard/>
+       </Link>
+      
+      
+      
+   </div> 
+   <div>
+   <Carousel/>
+   </div>
+<div className='flex justify-center mt-2 mb-1' >
+  <Link to={`/Products/All`}>
+  <button type="button" class=" border-gray-700 text-gray-700 border-2 p-1 text-xl">Explore More</button>
+  </Link>
+
+</div>
      
     </div>
   );

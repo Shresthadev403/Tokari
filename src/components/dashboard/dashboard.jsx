@@ -14,6 +14,8 @@ import ProductAdminDetails from "./productAdminDetials";
 import OrderAdminDetails from "./orderAdminDetails";
 import Stock from "./stock";
 import Sales from "./sales";
+import Notification from "./notification";
+import Inbox from "./inbox";
 
 
 
@@ -46,6 +48,8 @@ function Dashboard() {
         <Route exact path="Orders" element={<Orders/>}></Route>
         <Route exact path="Stock" element={<Stock/>}></Route>
         <Route exact path="Sales" element={<Sales/>}></Route>
+        <Route exact path="Notification" element={<Notification/>}></Route>
+        <Route exact path="Inbox" element={<Inbox/>}></Route>
         <Route exact path="/" element={<OverView/>}></Route>
       </Routes>
       </div>
