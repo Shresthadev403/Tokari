@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   BrowserRouter,
@@ -12,6 +12,8 @@ import {
 } from "react-router-dom";
 
 
+// hash router is used instead of browser router as gh-pages doesnot 
+// support BrowserRouter
 
 function ScrollToTop( { children } ) {
   let location = useLocation();
