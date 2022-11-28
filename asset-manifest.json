@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Tokari/static/css/main.46414eb3.css",
+    "main.js": "/Tokari/static/js/main.1e33a29d.js",
+    "static/js/787.737388d4.chunk.js": "/Tokari/static/js/787.737388d4.chunk.js",
+    "static/media/newlogo.png": "/Tokari/static/media/newlogo.b60dca18936a0523c787.png",
+    "static/media/demoImage1.jpg": "/Tokari/static/media/demoImage1.3887db3ba88c132b5b6c.jpg",
+    "static/media/demoImage2.jpg": "/Tokari/static/media/demoImage2.a62f71c1ef4ba61f0b66.jpg",
+    "static/media/productDemoImage1.jpg": "/Tokari/static/media/productDemoImage1.49043e4add622b55d3b3.jpg",
+    "static/media/productDemoImage.jpg": "/Tokari/static/media/productDemoImage.73dfa82a168acbbd6764.jpg",
+    "static/media/zoroProfile.jpg": "/Tokari/static/media/zoroProfile.209aada225a0b9227374.jpg",
+    "static/media/logo.svg": "/Tokari/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Tokari/index.html",
+    "main.46414eb3.css.map": "/Tokari/static/css/main.46414eb3.css.map",
+    "main.1e33a29d.js.map": "/Tokari/static/js/main.1e33a29d.js.map",
+    "787.737388d4.chunk.js.map": "/Tokari/static/js/787.737388d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46414eb3.css",
+    "static/js/main.1e33a29d.js"
+  ]
+}
