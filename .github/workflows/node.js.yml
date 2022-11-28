@@ -30,7 +30,7 @@ jobs:
     - run: npm run build --if-present
       env:
         CI: false
-    - name: Deploy react to gh-pages env:
+    - name: Deploy react to gh-pages 
       env:
         CI: false
 
