@@ -30,7 +30,9 @@ jobs:
     - run: npm run build --if-present
       env:
         CI: false
-    - name: Deploy react to gh-pages
+    - name: Deploy react to gh-pages env:
+        CI: false
+
       # You may pin to the exact commit or the version.
       # uses: alainQtec/deploy-react-to-ghpages@419dab458600d4a8607ceaae4646bc7470c1a7dc
       uses: alainQtec/deploy-react-to-ghpages@1.0.0-beta.2
