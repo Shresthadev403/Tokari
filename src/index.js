@@ -30,7 +30,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
      
-    <Router>
+    <Router basename="/Tokari">
     <ScrollToTop />
       <App />
     </Router>
