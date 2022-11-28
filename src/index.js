@@ -7,31 +7,27 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  
   useLocation,
 } from "react-router-dom";
 
-
-// hash router is used instead of browser router as gh-pages doesnot 
+// hash router is used instead of browser router as gh-pages doesnot
 // support BrowserRouter
 
-function ScrollToTop( { children } ) {
+function ScrollToTop({ children }) {
   let location = useLocation();
 
-  useEffect( () => {
-      window.scrollTo(0, 0);
-  }, [ location ] );
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
-  return children
+  return children;
 }
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-     
     <Router basename="/Tokari">
-    <ScrollToTop />
+      <ScrollToTop />
       <App />
     </Router>
   </React.StrictMode>
