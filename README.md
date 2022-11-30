@@ -12,6 +12,9 @@ A landing page for e-commerce using react and tailwind
 
 ![image text](https://github.com/Shresthadev403/Tokari/blob/master/preview/1.png)
 ![image text](https://github.com/Shresthadev403/Tokari/blob/master/preview/2.png)
+![image text](https://github.com/Shresthadev403/Tokari/blob/master/preview/19.png)
+![image text](https://github.com/Shresthadev403/Tokari/blob/master/preview/21.png)
+![image text](https://github.com/Shresthadev403/Tokari/blob/master/preview/22.png)
 ![image text](https://github.com/Shresthadev403/Tokari/blob/master/preview/3.png)
 ![image text](https://github.com/Shresthadev403/Tokari/blob/master/preview/4.png)
 ![image text](https://github.com/Shresthadev403/Tokari/blob/master/preview/5.png)
