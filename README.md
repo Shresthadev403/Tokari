@@ -8,4 +8,4 @@
        npm start
 ## Now, you are ready to go with this project
 ## Project preview
-[embed]http://example.com/file.pdf[/embed]
+<embed src="https://github.com/Shresthadev403/Tokari/blob/master/preview/preview.pdf" width="500" height="375">.
