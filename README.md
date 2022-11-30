@@ -1,4 +1,4 @@
-# A E-Commerce frontend made with react and tailwind
+ A E-Commerce frontend made with react and tailwind
 
 ## To get started with project
   ## clone the project 
