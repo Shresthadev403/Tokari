@@ -1,5 +1,5 @@
 # Tokari
- A landing page for e-commerce using react and tailwind
+A landing page for e-commerce using react and tailwind
 
 ## To get started with project
   ## clone the project 
