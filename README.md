@@ -1,4 +1,5 @@
- A E-Commerce frontend made with react and tailwind
+# Tokari
+ A landing page for e-commerce using react and tailwind
 
 ## To get started with project
   ## clone the project 
