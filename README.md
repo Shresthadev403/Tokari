@@ -1,10 +1,11 @@
-A new combined project
+# A E-Commerce frontend made with react and tailwind
 
-break points used
-
-Small (smaller than 640px)
-Medium (641px to 1007px)
-Large (1008px and larger)
-
-600 to break navbar
-break products after 500
+## To get started with project
+  ## clone the project 
+ ## install npm dependencies with command
+      npm i
+ ##   run react app with command
+       npm start
+## Now, you are ready to go with this project
+## Project preview
+[embed]http://example.com/file.pdf[/embed]
